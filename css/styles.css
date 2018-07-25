@@ -49,6 +49,7 @@ body, html {
     background-color: #111;
     color: #fff;
     padding: 20px;
+    display: inline-block;
 }
 
 @media(max-width: 568px) {
