@@ -8,6 +8,25 @@ body, html {
     color: #666;
 }
 
+nav {
+    float: right;
+    margin: 30px 30px 0 0;
+}
+
+nav a {
+    display: inline-block;
+    margin-left: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(1, 1, 1, 0.7);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #000;
+}
+
 .pimg {
     background-image: url(../img/background.jpg);
     min-height: 100%;
