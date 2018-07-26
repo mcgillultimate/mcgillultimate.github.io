@@ -8,6 +8,11 @@ body, html {
     color: #666;
 }
 
+.logo {
+    float: left;
+    margin: 20px 0 0 30px;
+}
+
 nav {
     float: right;
     margin: 30px 30px 0 0;
@@ -25,6 +30,10 @@ nav a {
 
 nav a:hover {
     color: #000;
+}
+
+nav a.icon {
+    display: none;
 }
 
 .pimg {
@@ -71,8 +80,33 @@ nav a:hover {
     display: inline-block;
 }
 
-@media(max-width: 568px) {
+@media(max-width: 720px) {
     .pimg {
         background-attachment: scroll;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav a.icon {
+        float: right;
+        display: block;
+    }
+
+    nav.responsive {
+        position: relative;
+    }
+
+    nav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    nav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
     }
 }

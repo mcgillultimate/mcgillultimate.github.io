@@ -1,3 +1,12 @@
+function myFunction() {
+    var x = document.getElementById("my-navbar");
+    if (x.className === "") {
+        x.className += " responsive";
+    } else {
+        x.className = "";
+    }
+}
+
 //Animate Smooth Scroll
 $('#view-about').on('click', function(){
     const about = $('#about').position().top;
