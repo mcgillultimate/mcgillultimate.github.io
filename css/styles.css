@@ -84,6 +84,18 @@ nav a.icon {
     display: inline-block;
 }
 
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 @media(max-width: 720px) {
     .pimg {
         background-attachment: scroll;
