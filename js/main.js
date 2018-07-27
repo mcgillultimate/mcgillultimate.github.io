@@ -1,12 +1,3 @@
-function myFunction() {
-    var x = document.getElementById("my-navbar");
-    if (x.className === "") {
-        x.className += " responsive";
-    } else {
-        x.className = "";
-    }
-}
-
 //Animate Smooth Scroll
 $('#view-about').on('click', function(){
     const about = $('#about').position().top;
@@ -46,4 +37,16 @@ $('#view-contact').on('click', function(){
     $('html, body').animate({
         scrollTop: contact
     }, 900)
+});
+
+//Expand navbar
+$('#expand-nav').on('click', function(){
+    if ($('nav').hasClass('responsive')) {
+        $('.nav-link').fadeOut();
+        $('nav').removeClass('responsive');
+    }
+    else {
+        $('nav').addClass('responsive');
+        $('.nav-link').fadeIn();
+    }
 });
