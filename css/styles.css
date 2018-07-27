@@ -48,8 +48,7 @@ nav a.icon {
 }
 
 .section {
-    text-align: justify;
-    padding: 50px 16%;
+    padding: 50px 50px;
 }
 
 .section h1 {
@@ -64,6 +63,12 @@ nav a.icon {
 .section-dark {
     background-color: #282e34;
     color: #ddd;
+}
+
+.section-text {
+    text-align: justify;
+    max-width: 900px;
+    margin: auto;
 }
 
 .ptext {
@@ -121,10 +126,6 @@ div > .fa:hover {
 @media(max-width: 720px) {
     .pimg {
         background-attachment: scroll;
-    }
-
-    .section {
-        padding: 50px 10%;
     }
 
     nav a {
