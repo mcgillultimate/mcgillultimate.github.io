@@ -48,8 +48,12 @@ nav a.icon {
 }
 
 .section {
-    text-align: center;
+    text-align: justify;
     padding: 50px 80px;
+}
+
+.section h1 {
+    text-align: center;
 }
 
 .section-light {
@@ -57,7 +61,7 @@ nav a.icon {
     color: #666;
 }
 
-.section-light {
+.section-dark {
     background-color: #282e34;
     color: #ddd;
 }
