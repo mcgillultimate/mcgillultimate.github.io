@@ -42,11 +42,9 @@ $('#view-contact').on('click', function(){
 //Expand navbar
 $('#expand-nav').on('click', function(){
     if ($('nav').hasClass('responsive')) {
-        $('.nav-link').fadeOut();
         $('nav').removeClass('responsive');
     }
     else {
         $('nav').addClass('responsive');
-        $('.nav-link').fadeIn();
     }
 });
