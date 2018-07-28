@@ -179,14 +179,32 @@ div > .fa:hover {
         display: block;
         text-align: left;
     }
-
-    #sponsor-list {
-        width: 300px;
-    }
 }
 
 @media(min-width: 721px) and (max-width: 1020px) {
     #sponsor-list {
         width: 600px;
+    }
+}
+
+@media(min-width: 421px) and (max-width: 720px) {
+    #sponsor-list {
+        width: 300px;
+    }
+}
+
+@media(max-width: 420px) {
+    #sponsor-list {
+        width: 100%;
+    }
+
+    .company-logo {
+        width: 100%;
+        padding: 16px 16px;
+        margin: 0;
+    }
+
+    .company-logo img {
+        width: 100%;
     }
 }
