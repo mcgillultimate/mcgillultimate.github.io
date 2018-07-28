@@ -10,7 +10,7 @@ body, html {
 
 .logo {
     float: left;
-    margin: 20px 0 0 30px;
+    margin: 16px 0 0 30px;
 }
 
 nav {
@@ -119,15 +119,30 @@ div > .fa:hover {
     opacity: 0.7;
 }
 
-.sponsor {
-    padding: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 16%;
+#sponsor-list {
+    margin: 0 auto;
+    width: 900px;
+    padding-left: 0;
+    font-size: 0;
 }
 
-.sponsor:hover {
+.company-logo {
+    display: inline-block;
+    font-size: 18px;
+    list-style-type: none;
+    width: 256px;
+    line-height: 50px;
+    margin: 16px 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.company-logo img {
+    width: 256px;
+    transition: opacity .2s, visibility .2s;
+}
+
+.company-logo img:hover {
     opacity: 0.7;
 }
 
@@ -163,5 +178,15 @@ div > .fa:hover {
         float: none;
         display: block;
         text-align: left;
-    }   
+    }
+
+    #sponsor-list {
+        width: 300px;
+    }
+}
+
+@media(min-width: 721px) and (max-width: 1020px) {
+    #sponsor-list {
+        width: 600px;
+    }
 }
