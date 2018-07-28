@@ -71,6 +71,11 @@ nav a.icon {
     margin: auto;
 }
 
+.section a {
+    color: #1b7eff;
+    text-decoration: none;
+}
+
 .ptext {
     position: absolute;
     top: 45%;
