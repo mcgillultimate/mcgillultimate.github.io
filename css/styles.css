@@ -71,6 +71,12 @@ nav a.icon {
     margin: auto;
 }
 
+#roster-list {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
 .ptext {
     position: absolute;
     top: 45%;
@@ -91,7 +97,9 @@ nav a.icon {
 
 .column {
     float: left;
-    width: 25%;
+    width: 50%;
+    min-width: 100px;
+    margin: auto
 }
 
 /* Clear floats after the columns */
