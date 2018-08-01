@@ -145,7 +145,7 @@ div > .fa:hover {
     list-style-type: none;
     width: 256px;
     line-height: 50px;
-    margin: 16px 16px;
+    margin: 16px 25px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -153,6 +153,7 @@ div > .fa:hover {
 .company-logo img {
     width: 256px;
     transition: opacity .2s, visibility .2s;
+    vertical-align: middle;
 }
 
 .company-logo img:hover {
