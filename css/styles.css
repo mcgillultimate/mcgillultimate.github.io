@@ -92,7 +92,7 @@ nav a.icon {
 }
 
 .section-text {
-    text-align: justify;
+    text-align: left;
     max-width: 900px;
     margin: auto;
 }
@@ -128,6 +128,7 @@ nav a.icon {
 
 .ptext .border.trans{
     background-color:transparent;
+    text-shadow: 0 0 10px #000;
 }
 
 .column {
