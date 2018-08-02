@@ -8,6 +8,8 @@ body, html {
     color: #666;
 }
 
+/* ---Logo and Navigation--- */
+
 .logo {
     float: left;
     margin: 24px 0 0 30px;
@@ -40,6 +42,8 @@ nav a.icon {
     display: none;
 }
 
+/* ---Parallax Images--- */
+
 .pimg1, .pimg2, .pimg3, .pimg4 {
     opacity: 0.7;
     position: relative;
@@ -68,6 +72,31 @@ nav a.icon {
     background-image: url(../img/amy_throw.jpg);
     min-height: 400px;
 }
+
+.ptext {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+}
+
+.ptext .border.trans{
+    background-color:transparent;
+    text-shadow: 0 0 10px #000;
+}
+
+/* ---Sections--- */
 
 .section {
     padding: 50px 30px;
@@ -102,33 +131,12 @@ nav a.icon {
     text-decoration: none;
 }
 
+/* ---Special Formatting--- */
+
 #roster-list {
     text-align: center;
     max-width: 900px;
     margin: auto;
-}
-
-.ptext {
-    position: absolute;
-    top: 45%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-}
-
-.ptext .border {
-    background-color: #111;
-    color: #fff;
-    padding: 20px;
-    display: inline-block;
-}
-
-.ptext .border.trans{
-    background-color:transparent;
-    text-shadow: 0 0 10px #000;
 }
 
 .column {
@@ -138,29 +146,11 @@ nav a.icon {
     margin: auto
 }
 
-/* Clear floats after the columns */
 .row:after {
+    /* Clear floats after the columns */
     content: "";
     display: table;
     clear: both;
-}
-
-/* Style all font awesome icons */
-div > .fa {
-    padding: 10px;
-    font-size: 20px;
-    width: 20px;
-    text-align: center;
-	text-decoration: none;
-	border-radius: 50%;
-	margin: 5px 2px;
-	background: #444;
-	color: white;
-}
-
-/* Add a hover effect if you want */
-div > .fa:hover {
-    opacity: 0.7;
 }
 
 #sponsor-list {
@@ -195,7 +185,26 @@ div > .fa:hover {
     text-align: center;
 }
 
-@media(max-width: 720px) {
+/* ---Font Awesome Icons--- */
+div > .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+	text-decoration: none;
+	/* border-radius: 50%; */
+	margin: 5px 2px;
+	/* background: #444; */
+	color: #ccc;
+}
+
+div > .fa:hover {
+    opacity: 0.7;
+}
+
+/* ---Different Screen Sizes--- */
+
+@media screen and (max-width: 720px) {
     .pimg1, .pimg2, .pimg3, .pimg4 {
         background-attachment: scroll;
     }
@@ -226,19 +235,19 @@ div > .fa:hover {
     }
 }
 
-@media(min-width: 721px) and (max-width: 1020px) {
+@media screen and (min-width: 721px) and (max-width: 1020px) {
     #sponsor-list {
         width: 600px;
     }
 }
 
-@media(min-width: 421px) and (max-width: 720px) {
+@media screen and (min-width: 421px) and (max-width: 720px) {
     #sponsor-list {
         width: 300px;
     }
 }
 
-@media(max-width: 420px) {
+@media screen and (max-width: 420px) {
     #sponsor-list {
         width: 100%;
     }
