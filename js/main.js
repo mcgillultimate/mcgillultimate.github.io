@@ -24,7 +24,7 @@ $('#view-uandu').on('click', function(){
 });
 
 $('#view-sponsors').on('click', function(){
-    const sponsors = $('#sponsors').position().top;
+    const sponsors = $('#sponsor-title').position().top;
 
     $('html, body').animate({
         scrollTop: sponsors
