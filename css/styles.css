@@ -87,6 +87,10 @@ nav a.icon {
     color: #ddd;
 }
 
+.section-dark strong {
+    color: #fff;
+}
+
 .section-text {
     text-align: justify;
     max-width: 900px;
@@ -94,7 +98,7 @@ nav a.icon {
 }
 
 .section a {
-    color: #1b7eff;
+    color: #4499ff;
     text-decoration: none;
 }
 
