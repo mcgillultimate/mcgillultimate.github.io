@@ -8,7 +8,7 @@ $('#view-about').on('click', function(){
 });
 
 $('#view-roster').on('click', function(){
-    const roster = $('#roster').position().top;
+    const roster = $('#roster-title').position().top;
 
     $('html, body').animate({
         scrollTop: roster
@@ -16,7 +16,7 @@ $('#view-roster').on('click', function(){
 });
 
 $('#view-uandu').on('click', function(){
-    const uandu = $('#uandu').position().top;
+    const uandu = $('#uandu-title').position().top;
 
     $('html, body').animate({
         scrollTop: uandu
