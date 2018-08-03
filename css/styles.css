@@ -74,7 +74,7 @@ nav a.icon {
 }
 
 .pimg5 {
-    background-image: url(../img/men_a_candid.jpg);
+    background-image: url(../img/brenden_joncas.jpg);
     min-height: 100%;
 }
 
@@ -198,7 +198,7 @@ div > .fa {
     text-align: center;
 	text-decoration: none;
 	/* border-radius: 50%; */
-	margin: 5px 2px;
+    margin: 5px 2px;
 	/* background: #444; */
 	color: #fff;
 }
