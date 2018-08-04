@@ -14,13 +14,14 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="google-site-verification" content="FgUb_SBC4VTtTPXOZogwr8uGhumim3ZcW6LK8momOyA" />
     <title>McGill Ultimate Team</title>
+    <script type="text/javascript" src='js/main.js'> </script>
 </head>
 <body>
     <div class="pimg1">
         <div class="logo">
             <img src="/img/logo.png" alt="">
         </div>
-        <nav class="main-nav">
+        <nav id="main-nav">
             <a href="#about" id="view-about">About</a>
             <a href="#roster" id="view-roster">Rosters</a>
             <a href="#uandu" id="view-uandu">U&amp;U</a>
@@ -66,116 +67,39 @@
         </div>
     </div>
 
-    <div class="section section-light" id="roster">
+    <div class="section-roster" id="roster">
         <div id="roster-list">
             <nav id="roster-nav">
-                <a href="#2018" id="view-2018">2018</a>
+                <a href="#2018" id="view-2018" color="#000">2018</a>
                 <a href="#2017" id="view-2017">2017</a>
-                <a href="#2017" id="view-2017">2016</a>
+                <a href="#2017" id="view-2016">2016</a>
                 <a href="javascript:void(0);" class="icon" id="expand-nav">
                     <i class="fa fa-bars"></i>
                 </a>
             </nav>
+            <h2 id="roster-header"></h2>
             <!-- Rosters section is 2x2 to look better on mobile -->  
             <div class="row">
                 <div class="column">
                     <h4>Men's A</h4>
-                    <p> 
-                        Adam Gosselin<br> 
-                        Albert Kragl<br>
-                        Brenden Kadota<br>
-                        Christophe Tremblay-Joncas<br>
-                        Christos Cunning<br>
-                        Daniel Tessier<br>
-                        Edward Tu<br>
-                        Elias Hess-Childs<br>
-                        Gabriel Gefter<br>
-                        Georges Cote<br>
-                        Henry Lu<br>
-                        Kirk Wright (C)<br>
-                        Lloyd Park<br>
-                        Lucas Ethgen<br>
-                        Ludovic Cao<br>
-                        Paul Hooley<br>
-                        Thomas McAlear (C)<br>
-                        Thomas Ronson<br>
-                        Thomas Wright<br>
-                        Timmy Woo (C)<br>
-                        Vincent Lee<br>
-                        <!-- Linebreaks are temporary, should probably use something else eventually -->   
-                    </p>
+                    <p id="mens-A"></p>
                 </div>
                 <div class="column">
                     <h4>Women's A</h4>
-                    <p> 
-                        Amy Ker (C)<br>
-                        Bea Lehmann<br>
-                        Camille Forest<br>
-                        Celine Huang<br>
-                        Elsa Chu<br>
-                        Georgia Cato<br>
-                        Grace Longson<br>
-                        Ines Petard<br>
-                        Julia Biris (C)<br>
-                        Katie Hu (C)<br>
-                        Kelly Amrud<br>
-                        Lianne Campbell<br>
-                        Lindsay Potts<br>
-                        Lucia Wang<br>
-                        Mariah Chang<br>
-                        Paula Figueroa<br>
-                        Peggie Hsu<br>
-                        Taylor Johansen<br>
-                    </p>
+                    <p id="womens-A"></p>
                 </div>
             </div>
             <div class="row">
                 <div class="column">
                     <h4>Men's B</h4>
-                    <p> 
-                        Alexander Li<br>
-                        Angus McLean<br>
-                        Dylan Andrew Golden<br>
-                        Émile Riel-Proulx<br>
-                        Everett Stamm<br>
-                        Finlay Douglas<br>
-                        Harrison Kim<br>
-                        Henry Richardson<br>
-                        Liam Baker<br>
-                        Jackson Spainhoward<br>
-                        Jay Jeong<br>
-                        Jesse Schwartz<br>
-                        Joey Richmond<br>
-                        Nathan Osman<br>
-                        Nico Rullman<br>
-                        Ryan Burgett <br>
-                        Saeesh Mangwani<br>
-                        Sam Hecht <br>
-                        Samuel Grégoire<br>
-                        Thibault Leyne<br>
-                        William MacCaul<br> 
-                        <!-- Linebreaks are temporary, should probably use something else eventually -->   
-                    </p>
+                    <p id="mens-B"></p>
                 </div>
                 <div class="column">
                     <h4>Women's B</h4>
-                    <p> 
-                        Clara Chu<br>
-                        Carrie Gu<br>
-                        Daria Eisner<br>
-                        Fabiana Chamis<br>
-                        Hanisah Hilmi<br>
-                        Helen Turvene<br>
-                        Jenna Yanke<br>
-                        Kaitlyn Liu<br>
-                        Lauren Benson-Armer<br>
-                        Lynda Au<br>
-                        Mirela Maier<br>
-                        Neala Farley<br>
-                        Nicole Pelletier<br>
-                        Noelia De La Cruz<br>
-                    </p>
+                    <p id="womens-B"></p>
                 </div>
+                <!-- Load latest rosters on page load -->
+                <script>loadDefaultRosters();</script>
             </div>
             <!-- Round headshots for each player -->
             <!-- Have a tab for Men's A/B, Women's A/B -->
@@ -291,6 +215,6 @@
     crossorigin="anonymous"></script>
 
     <script src="/js/main.js"></script>
-
+    
 </body>
 </html>
