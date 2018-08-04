@@ -47,10 +47,6 @@ nav a.icon {
     display: none;
 }
 
-ul {
-    list-style-type: none;
-  }
-
 /* ---Parallax Images--- */
 
 .pimg1, .pimg2, .pimg3, .pimg4, .pimg5 {
@@ -152,6 +148,11 @@ ul {
 }
 
 .section-roster a {
+    display: inline-block;
+    margin-left: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
     color: rgba(1, 1, 1, 0.7);
     text-decoration: none;
 }
