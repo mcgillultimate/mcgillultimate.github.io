@@ -39,6 +39,11 @@ $('#view-contact').on('click', function(){
     }, 900)
 });
 
+$('#roster-nav a').click(function() {
+    $(this).closest("a").addClass('highlight').siblings().removeClass('highlight');
+    return(false);   // no default behavior from clicking on the link
+});
+
 // Load 2016 rosters
 $('#view-2016').on('click', function(){
     const mensA = ["Albert Kragl","Alistair Russell (C)","Angus Boswell","Arthur Denefle","Brenden Kadota","Christophe Tremblay-Joncas","Connor Fowlie","Daniel Tessier","Eamonn Lye","Edouard Levesque","Edward Tu","Elias Hess-Childs","Gabriel Russell","Henry Lu","Jason Galet","Kirk Wright","Lloyd Park","Lucas Ethgen","Neil Wu","Nicolas Swan","Paul Hooley","Simon Reynders","Thomas McAlear (C)","Thomas Ronson","Timmy Woo"]
