@@ -110,10 +110,10 @@ $('#view-2017').on('click', function(){
 
 // Load 2018 rosters
 $('#view-2018').on('click', function(){
-    const mensA = ["Coming soon"]
-    const womensA = ["Coming soon"]
-    const mensB = ["Coming soon"]
-    const womensB = ["Coming soon"]
+    const mensA = ["Adam Gosselin","Albert Kragl (C)","Angus Boswell","Brenden Kadota","Calvin Coulbury","Christophe Tremblay-Joncas (C)","Christos Cunning","Edward Tu","Elias Hess-Childs","Elliot Wong (PR)","Gabriel Gefter","Hayden Stone","Jack Doherty-Eagles","Jordan Faries","Paul Hooley","Thomas Griffin","Thomas McAlear (C)","Thomas Ronson","Thomas Wright","Timmy Woo (C)","Vincent Lee"]
+    const womensA = ["Amy Ker (C)","Alena Midgen","Antoinette Busch","Bea Lehmann","Caitlin Fowler (PR)","Camille Couture","Carrie Gu","Celine Huang","Cindy He","Deborah Su","Grace Longson","Helen Turvene","Ines Petard","Julia Biris","Kelly Amrud","Lianne Campbell","Lindsay Potts (C)","Lucia Wang","Lucy Core","Nina Tong","Paula Figeuroa"]
+    const mensB = ["Alexander Li","Adrien Philardeau-Planche","David Gao","David How","Derek Allen","Drake Wong","Elio Abi Younes","Émile Riel","Everett Stamm","Fenton Garvie","Fin Douglas","Guillaume Paquette","Henry Richardson","Jackson Foellmer","Jay Jeong","Liam Baker","Luca Stabile","Nathan Osman","Nikola Lemic","Ryan Burgett","Ryan Purkhart","Saeesh Mangwani","Sam Hecht","Samuel Grégoire","Theo Malhotra"]
+    const womensB = ["Haein Yoo","Jenna Yanke","Jill Miao","Katelyn Liu","Leonie Laug","Maria Castellanos","Milly Huang","Nicole Dacanay","Rachel Chen","Saphia Petard","Yasmine Bougueche"]
     var players = "";
     // Populate Men's A
     for (var i = 0; i < mensA.length; i++) {
@@ -140,11 +140,13 @@ $('#view-2018').on('click', function(){
     document.getElementById("womens-B").innerHTML = players;  
 });
 
+
+
 function loadDefaultRosters() {
-    const mensA = ["Adam Gosselin","Albert Kragl","Brenden Kadota","Christophe Tremblay-Joncas","Christos Cunning","Daniel Tessier","Edward Tu","Elias Hess-Childs","Gabriel Gefter","Georges Cote","Henry Lu","Kirk Wright (C)","Lloyd Park","Lucas Ethgen","Ludovic Cao","Paul Hooley","Thomas McAlear (C)","Thomas Ronson","Thomas Wright","Timmy Woo (C)","Vincent Lee"]
-    const womensA = ["Amy Ker (C)","Bea Lehmann","Camille Forest","Celine Huang","Elsa Chu","Georgia Cato","Grace Longson","Ines Petard","Julia Biris (C)","Katie Hu (C)","Kelly Amrud","Lianne Campbell","Lindsay Potts","Lucia Wang","Mariah Chang","Paula Figueroa","Peggie Hsu","Taylor Johansen"]
-    const mensB = ["Alexander Li","Angus McLean","Dylan Andrew Golden","Émile Riel-Proulx","Everett Stamm","Finlay Douglas","Harrison Kim","Henry Richardson","Liam Baker","Jackson Spainhoward","Jay Jeong","Jesse Schwartz","Joey Richmond","Nathan Osman","Nico Rullman","Ryan Burgett","Saeesh Mangwani","Sam Hecht","Samuel Grégoire","Thibault Leyne","William MacCaul"]
-    const womensB = ["Clara Chu","Carrie Gu","Daria Eisner","Fabiana Chamis","Hanisah Hilmi","Helen Turvene","Jenna Yanke","Kaitlyn Liu","Lauren Benson-Armer","Lynda Au","Mirela Maier","Neala Farley","Nicole Pelletier","Noelia De La Cruz"]
+    const mensA = ["Adam Gosselin","Albert Kragl (C)","Angus Boswell","Brenden Kadota","Calvin Coulbury","Christophe Tremblay-Joncas (C)","Christos Cunning","Edward Tu","Elias Hess-Childs","Elliot Wong (PR)","Gabriel Gefter","Hayden Stone","Jack Doherty-Eagles","Jordan Faries","Paul Hooley","Thomas Griffin","Thomas McAlear (C)","Thomas Ronson","Thomas Wright","Timmy Woo (C)","Vincent Lee"]
+    const womensA = ["Amy Ker (C)","Alena Midgen","Antoinette Busch","Bea Lehmann","Caitlin Fowler (PR)","Camille Couture","Carrie Gu","Celine Huang","Cindy He","Deborah Su","Grace Longson","Helen Turvene","Ines Petard","Julia Biris","Kelly Amrud","Lianne Campbell","Lindsay Potts (C)","Lucia Wang","Lucy Core","Nina Tong","Paula Figeuroa"]
+    const mensB = ["Alexander Li","Adrien Philardeau-Planche","David Gao","David How","Derek Allen","Drake Wong","Elio Abi Younes","Émile Riel","Everett Stamm","Fenton Garvie","Fin Douglas","Guillaume Paquette","Henry Richardson","Jackson Foellmer","Jay Jeong","Liam Baker","Luca Stabile","Nathan Osman","Nikola Lemic","Ryan Burgett","Ryan Purkhart","Saeesh Mangwani","Sam Hecht","Samuel Grégoire","Theo Malhotra"]
+    const womensB = ["Haein Yoo","Jenna Yanke","Jill Miao","Katelyn Liu","Leonie Laug","Maria Castellanos","Milly Huang","Nicole Dacanay","Rachel Chen","Saphia Petard","Yasmine Bougueche"]
     var players = "";
     // Populate Men's A
     for (var i = 0; i < mensA.length; i++) {
@@ -168,7 +170,7 @@ function loadDefaultRosters() {
     for (var i = 0; i < womensB.length; i++) {
         players += womensB[i] + "<br>";
     }
-    document.getElementById("womens-B").innerHTML = players;
+    document.getElementById("womens-B").innerHTML = players;  
 }
 
 //Expand navbar
