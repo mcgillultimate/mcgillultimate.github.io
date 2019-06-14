@@ -68,7 +68,7 @@ nav a.icon {
 }
 
 .pimg2 {
-    background-image: url(../img/men_a_huddle.jpg);
+    background-image: url(../img/on_the_line.jpg);
     min-height: 400px;
 }
 
@@ -83,7 +83,7 @@ nav a.icon {
 }
 
 .pimg5 {
-    background-image: url(../img/brenden_joncas.jpg);
+    background-image: url(../img/jordan.jpg);
     min-height: 100%;
 }
 
@@ -235,7 +235,7 @@ div > .fa:hover {
 /* ---Different Screen Sizes--- */
 
 @media screen and (max-width: 720px) {
-    .pimg1, .pimg2, .pimg3, .pimg4 {
+    .pimg1, .pimg2, .pimg3, .pimg4, .pimg5 {
         background-attachment: scroll;
     }
 
