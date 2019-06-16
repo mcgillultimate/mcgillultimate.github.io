@@ -290,14 +290,14 @@ div > .fa:hover {
     }
 }
 
-@media screen and (min-width: 372px) and (max-width: 423px) {
-    .flex-fix {
-        padding-left: 50px;
+@media screen and (max-width: 489px) {
+    #roster-nav {
+        display: inline-block;
+        text-align: center;
     }
-}
-
-@media screen and (min-width: 423px) and (max-width: 489px) {
-    .flex-fix {
-        padding-left: 130px;
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
