@@ -165,10 +165,8 @@ nav a.icon {
 
 /* ---Special Formatting--- */
 
-/* tinker with this */
-#roster a {
-    display: inline-block;
-    margin-left: 24px;
+#roster-nav a {
+    display: flex;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -177,7 +175,9 @@ nav a.icon {
 }
 
 #roster-nav {
-    text-align: center;
+    display: flex; 
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 
 #sponsor-list {
@@ -287,5 +287,17 @@ div > .fa:hover {
 
     .company-logo img {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 372px) and (max-width: 423px) {
+    .flex-fix {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (min-width: 423px) and (max-width: 489px) {
+    .flex-fix {
+        padding-left: 130px;
     }
 }
