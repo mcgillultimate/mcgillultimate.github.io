@@ -14,7 +14,6 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="google-site-verification" content="FgUb_SBC4VTtTPXOZogwr8uGhumim3ZcW6LK8momOyA" />
     <title>McGill Ultimate Team</title>
-    <script type="text/javascript" src='js/main.js'> </script>
 </head>
 <body>
     <div class="pimg1">
@@ -67,39 +66,34 @@
         </div>
     </div>
 
-    <div class="section-roster" id="roster">
-        <div id="roster-list">
+    <div class="section section-light" id="roster">
+        <div class="section-text">
             <nav id="roster-nav">
-                <a href="#2018" id="view-2018">2018</a>
-                <a href="#2017" id="view-2017" class="highlight">2017</a>
-                <a href="#2016" id="view-2016">2016</a>
+                <a href="#mens-a" id="view-ma" class="highlight">Men's A</a>
+                <a href="#womens-a" id="view-wa">Women's A</a>
+                <a href="#mens-b" id="view-mb">Men's B</a>
+                <a href="#womens-b" id="view-wb">Women's B</a>
             </nav>
-            <h2 id="roster-header"></h2>
-            <!-- Rosters section is 2x2 to look better on mobile -->  
+            <br>
             <div class="row">
                 <div class="column">
-                    <h4>Men's A</h4>
-                    <p id="mens-A"></p>
-                </div>
-                <div class="column">
-                    <h4>Women's A</h4>
-                    <p id="womens-A"></p>
+                    <table id="roster-table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2</td><td>Edward Tu</td></tr><tr><td>3</td><td>Thomas Griffin</td></tr><tr><td>4</td><td><strong>Thomas McAlear</strong></td></tr><tr><td>6</td><td>Paul Hooley</td></tr><tr><td>7</td><td>Elias Hess-Childs</td></tr><tr><td>8</td><td>Gabriel Gefter</td></tr><tr><td>14</td><td>Hayden Stone</td></tr><tr><td>15</td><td>Christos Cunning</td></tr><tr><td>23</td><td>Thomas Ronson</td></tr><tr><td>24</td><td>Vincent Lee</td></tr><tr><td>26</td><td>Thomas Wright</td></tr><tr><td>27</td><td>Jack Eagles</td></tr><tr><td>28</td><td>Jordan Faries</td></tr><tr><td>33</td><td>Brenden Kadota</td></tr><tr><td>37</td><td>Calvin Coulbury</td></tr><tr><td>44</td><td><strong>Christophe Tremblay-Joncas</strong></td></tr><tr><td>47</td><td><strong>Albert Kragl</strong></td></tr><tr><td>50</td><td>Angus Boswell</td></tr><tr><td>50</td><td>Adam Gosselin</td></tr><tr><td>60</td><td><i>Elliot Wong</i></td></tr><tr><td>71</td><td><strong>Timmy Woo</strong></td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="row">
-                <div class="column">
-                    <h4>Men's B</h4>
-                    <p id="mens-B"></p>
-                </div>
-                <div class="column">
-                    <h4>Women's B</h4>
-                    <p id="womens-B"></p>
-                </div>
-                <!-- Load latest rosters on page load -->
-                <script>loadDefaultRosters();</script>
-            </div>
-            <!-- Round headshots for each player -->
-            <!-- Have a tab for Men's A/B, Women's A/B -->
+            <br>
+            <strong>Captains in bold</strong>
+            <br>
+            <i>Practice players in italics</i>
         </div>
     </div>
 
