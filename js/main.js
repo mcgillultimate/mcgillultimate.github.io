@@ -63,6 +63,114 @@ $("#roster-nav a").click(function() {
   return false; // no default behavior from clicking on the link
 });
 
+const teams = {
+  MENS_A: "ma",
+  WOMENS_A: "wa",
+  MENS_B: "mb",
+  WOMENS_B: "wb"
+};
+
+var selected_year = "2018";
+var selected_team = teams.MENS_A;
+
+function loadRostersForYear() {
+  var year = $("#roster-year-select option:selected").text();
+  if (year === "2018") {
+    selected_year = "2018";
+    if (selected_team === teams.MENS_A) {
+      loadRoster(
+        ma_roster_2018,
+        ma_practice_roster_2018,
+        ma_captains_2018,
+        ma_jersey_numbers_2018
+      );
+    } else if (selected_team === teams.WOMENS_A) {
+      loadRoster(
+        wa_roster_2018,
+        wa_practice_roster_2018,
+        wa_captains_2018,
+        wa_jersey_numbers_2018
+      );
+    } else if (selected_team === teams.MENS_B) {
+      loadRoster(
+        mb_roster_2018,
+        mb_practice_roster_2018,
+        mb_captains_2018,
+        mb_jersey_numbers_2018
+      );
+    } else if (selected_team === teams.WOMENS_B) {
+      loadRoster(
+        wb_roster_2018,
+        wb_practice_roster_2018,
+        wb_captains_2018,
+        wb_jersey_numbers_2018
+      );
+    }
+  } else if (year === "2017") {
+    selected_year = "2017";
+    if (selected_team === teams.MENS_A) {
+      loadRoster(
+        ma_roster_2017,
+        ma_practice_roster_2017,
+        ma_captains_2017,
+        ma_jersey_numbers_2017
+      );
+    } else if (selected_team === teams.WOMENS_A) {
+      loadRoster(
+        wa_roster_2017,
+        wa_practice_roster_2017,
+        wa_captains_2017,
+        wa_jersey_numbers_2017
+      );
+    } else if (selected_team === teams.MENS_B) {
+      loadRoster(
+        mb_roster_2017,
+        mb_practice_roster_2017,
+        mb_captains_2017,
+        mb_jersey_numbers_2017
+      );
+    } else if (selected_team === teams.WOMENS_B) {
+      loadRoster(
+        wb_roster_2017,
+        wb_practice_roster_2017,
+        wb_captains_2017,
+        wb_jersey_numbers_2017
+      );
+    }
+  } else if (year === "2016") {
+    selected_year = "2016";
+    if (selected_team === teams.MENS_A) {
+      loadRoster(
+        ma_roster_2016,
+        ma_practice_roster_2016,
+        ma_captains_2016,
+        ma_jersey_numbers_2016
+      );
+    } else if (selected_team === teams.WOMENS_A) {
+      loadRoster(
+        wa_roster_2016,
+        wa_practice_roster_2016,
+        wa_captains_2016,
+        wa_jersey_numbers_2016
+      );
+    } else if (selected_team === teams.MENS_B) {
+      loadRoster(
+        mb_roster_2016,
+        mb_practice_roster_2016,
+        mb_captains_2016,
+        mb_jersey_numbers_2016
+      );
+    } else if (selected_team === teams.WOMENS_B) {
+      loadRoster(
+        wb_roster_2016,
+        wb_practice_roster_2016,
+        wb_captains_2016,
+        wb_jersey_numbers_2016
+      );
+    }
+  }
+}
+
 function loadRoster(roster, practice_roster, captains, jersey_numbers) {
   var table = document
     .getElementById("roster-table")
@@ -74,7 +182,8 @@ function loadRoster(roster, practice_roster, captains, jersey_numbers) {
     var row_number = row.insertCell(0);
     var row_name = row.insertCell(1);
 
-    row_number.innerHTML = jersey_numbers[i];
+    if (typeof jersey_numbers[i] === "undefined") row_number.innerHTML = "";
+    else row_number.innerHTML = jersey_numbers[i];
 
     if (practice_roster.indexOf(roster[i]) != -1) {
       row_name.innerHTML = "<i>" + roster[i] + "</i>";
@@ -86,192 +195,113 @@ function loadRoster(roster, practice_roster, captains, jersey_numbers) {
   }
 }
 
-const ma_roster = [
-  "Edward Tu",
-  "Thomas Griffin",
-  "Thomas McAlear",
-  "Paul Hooley",
-  "Elias Hess-Childs",
-  "Gabriel Gefter",
-  "Hayden Stone",
-  "Christos Cunning",
-  "Thomas Ronson",
-  "Vincent Lee",
-  "Thomas Wright",
-  "Jack Eagles",
-  "Jordan Faries",
-  "Brenden Kadota",
-  "Calvin Coulbury",
-  "Christophe Tremblay-Joncas",
-  "Albert Kragl",
-  "Angus Boswell",
-  "Adam Gosselin",
-  "Elliot Wong",
-  "Timmy Woo"
-];
-const ma_practice_roster = ["Elliot Wong"];
-const ma_captains = [
-  "Albert Kragl",
-  "Thomas McAlear",
-  "Christophe Tremblay-Joncas",
-  "Timmy Woo"
-];
-const ma_jersey_numbers = [
-  2,
-  3,
-  4,
-  6,
-  7,
-  8,
-  14,
-  15,
-  23,
-  24,
-  26,
-  27,
-  28,
-  33,
-  37,
-  44,
-  47,
-  50,
-  50,
-  60,
-  71
-];
-
-const wa_roster = [
-  "Antoinette Busch",
-  "Ines Petard",
-  "Carrie Gu",
-  "Camille Couture",
-  "Helen Turvene",
-  "Julia Biris",
-  "Paula Figeuroa ",
-  "Deborah Su",
-  "Amy Ker",
-  "Grace Longson",
-  "Kelly Amrud",
-  "Cindy He",
-  "Lianne Campbell",
-  "Celine Huang",
-  "Lindsay Potts",
-  "Lucia Wang",
-  "Lucy Core",
-  "Jingjing Tong",
-  "Bea Lehmann",
-  "Caitlin Fowler"
-];
-const wa_practice_roster = ["Caitlin Fowler"];
-const wa_captains = ["Lindsay Potts", "Amy Ker"];
-const wa_jersey_numbers = [
-  3,
-  5,
-  6,
-  7,
-  9,
-  10,
-  11,
-  12,
-  14,
-  16,
-  17,
-  18,
-  19,
-  22,
-  23,
-  27,
-  36,
-  66,
-  77,
-  "NA"
-];
-
-const mb_roster = [
-  "Nikola Lemic",
-  "Luca Fournier",
-  "Ryan Purkhart",
-  "Derek Allen",
-  "Jay Jeong",
-  "Liam Baker",
-  "Nathan Osman",
-  "Everett Stamm",
-  "Drake Wong",
-  "Elio Abi Younes",
-  "Henry Richardson",
-  "David Gao",
-  "Ryan Burgett",
-  "Jackson Foellmer",
-  "David How",
-  "Samuel Grégoire",
-  "Alexander Li ",
-  "Theo Malholtra",
-  "Fenton Garvie",
-  "Sam Hecht",
-  "Fin Douglas"
-];
-const mb_practice_roster = [];
-const mb_captains = [];
-const mb_jersey_numbers = [
-  0,
-  2,
-  3,
-  5,
-  6,
-  9,
-  9,
-  10,
-  11,
-  12,
-  14,
-  15,
-  17,
-  22,
-  35,
-  36,
-  49,
-  51,
-  84,
-  97,
-  99
-];
-
-const wb_roster = [
-  "Yasmine Bougueche",
-  "Saphia Petard",
-  "Haein Yoo",
-  "Rachel Chen",
-  "Katelyn Liu",
-  "Maria Castellanos",
-  "Jenna Yanke",
-  "Jill (Jingling) Miao",
-  "Leonie Laug",
-  "Milly Huang",
-  "Nicole Dacanay"
-];
-const wb_practice_roster = [];
-const wb_captains = [];
-const wb_jersey_numbers = [0, 4, 5, 8, 12, 13, 16, 17, 24, 26, 27];
-
 // Load Men's A rosters
-$("#view-ma").on("click", () =>
-  loadRoster(ma_roster, ma_practice_roster, ma_captains, ma_jersey_numbers)
-);
+$("#view-ma").on("click", () => {
+  selected_team = teams.MENS_A;
+  if (selected_year === "2018") {
+    loadRoster(
+      ma_roster_2018,
+      ma_practice_roster_2018,
+      ma_captains_2018,
+      ma_jersey_numbers_2018
+    );
+  } else if (selected_year === "2017") {
+    loadRoster(
+      ma_roster_2017,
+      ma_practice_roster_2017,
+      ma_captains_2017,
+      ma_jersey_numbers_2017
+    );
+  } else if (selected_year === "2016") {
+    loadRoster(
+      ma_roster_2016,
+      ma_practice_roster_2016,
+      ma_captains_2016,
+      ma_jersey_numbers_2016
+    );
+  }
+});
 
 // Load Men's B rosters
-$("#view-mb").on("click", () =>
-  loadRoster(mb_roster, mb_practice_roster, mb_captains, mb_jersey_numbers)
-);
+$("#view-mb").on("click", () => {
+  selected_team = teams.MENS_B;
+  if (selected_year === "2018") {
+    loadRoster(
+      mb_roster_2018,
+      mb_practice_roster_2018,
+      mb_captains_2018,
+      mb_jersey_numbers_2018
+    );
+  } else if (selected_year === "2017") {
+    loadRoster(
+      mb_roster_2017,
+      mb_practice_roster_2017,
+      mb_captains_2017,
+      mb_jersey_numbers_2017
+    );
+  } else if (selected_year === "2016") {
+    loadRoster(
+      mb_roster_2016,
+      mb_practice_roster_2016,
+      mb_captains_2016,
+      mb_jersey_numbers_2016
+    );
+  }
+});
 
 // Load Women's A rosters
-$("#view-wa").on("click", () =>
-  loadRoster(wa_roster, wa_practice_roster, wa_captains, wa_jersey_numbers)
-);
+$("#view-wa").on("click", () => {
+  selected_team = teams.WOMENS_A;
+  if (selected_year === "2018") {
+    loadRoster(
+      wa_roster_2018,
+      wa_practice_roster_2018,
+      wa_captains_2018,
+      wa_jersey_numbers_2018
+    );
+  } else if (selected_year === "2017") {
+    loadRoster(
+      wa_roster_2017,
+      wa_practice_roster_2017,
+      wa_captains_2017,
+      wa_jersey_numbers_2017
+    );
+  } else if (selected_year === "2016") {
+    loadRoster(
+      wa_roster_2016,
+      wa_practice_roster_2016,
+      wa_captains_2016,
+      wa_jersey_numbers_2016
+    );
+  }
+});
 
 // Load Women's B rosters
-$("#view-wb").on("click", () =>
-  loadRoster(wb_roster, wb_practice_roster, wb_captains, wb_jersey_numbers)
-);
+$("#view-wb").on("click", () => {
+  selected_team = teams.WOMENS_B;
+  if (selected_year === "2018") {
+    loadRoster(
+      wb_roster_2018,
+      wb_practice_roster_2018,
+      wb_captains_2018,
+      wb_jersey_numbers_2018
+    );
+  } else if (selected_year === "2017") {
+    loadRoster(
+      wb_roster_2017,
+      wb_practice_roster_2017,
+      wb_captains_2017,
+      wb_jersey_numbers_2017
+    );
+  } else if (selected_year === "2016") {
+    loadRoster(
+      wb_roster_2016,
+      wb_practice_roster_2016,
+      wb_captains_2016,
+      wb_jersey_numbers_2016
+    );
+  }
+});
 
 //Expand navbar
 $("#expand-nav").on("click", function() {

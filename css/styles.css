@@ -103,14 +103,14 @@ nav a.icon {
   text-transform: uppercase;
 }
 
-.ptext .border {
+.ptext .section-border {
   background-color: #111;
   color: #fff;
   padding: 20px;
   display: inline-block;
 }
 
-.ptext .border.trans {
+.ptext .section-border.trans {
   background-color: transparent;
   text-shadow: 0 0 10px #000;
 }
@@ -150,22 +150,27 @@ nav a.icon {
   text-decoration: none;
 }
 
-.row {
+.roster-row {
   display: flex;
 }
 
-.row .column {
+.roster-row .roster-column {
   display: inline-block;
   margin: auto;
 }
 
-.row .column table {
+.roster-row .roster-column table {
   border-spacing: 30px 5px;
 }
 
-.row .column th {
+.roster-row .roster-column th {
   text-align: center;
   font-style: italic;
+}
+
+td {
+  padding: 2px 5px 2px 20px;
+  text-align: center;
 }
 
 /* ---Special Formatting--- */

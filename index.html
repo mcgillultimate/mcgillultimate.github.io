@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -31,7 +32,7 @@
             </a>
         </nav>
         <div class="ptext">
-            <span class="border">
+            <span class="section-border">
                 McGill Ultimate Team
             </span>
         </div>
@@ -67,7 +68,7 @@
 
     <div class="pimg2" id="roster-title">
         <div class="ptext">
-            <span class="border trans">
+            <span class="section-border trans">
                 2018 Rosters
             </span>
         </div>
@@ -75,6 +76,13 @@
 
     <div class="section section-light" id="roster">
         <div class="section-text">
+            <div class="text-center">
+                <select class="custom-select w-25" id="roster-year-select" onchange="loadRostersForYear()">
+                    <option selected>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                </select>
+            </div>
             <div class="wrapper">
                 <nav id="roster-nav">
                     <a href="#mens-a" id="view-ma" class="highlight">Men's A</a>
@@ -84,8 +92,8 @@
                 </nav>
             </div>
             <br>
-            <div class="row">
-                <div class="column">
+            <div class="roster-row">
+                <div class="roster-column">
                     <table id="roster-table">
                         <thead>
                             <tr>
@@ -108,7 +116,7 @@
 
     <div class="pimg3" id="uandu-title">
         <div class="ptext">
-            <span class="border trans">
+            <span class="section-border trans">
                 Unleashed and Untrained
             </span>
         </div>
@@ -143,7 +151,7 @@
 
     <div class="pimg4" id="sponsor-title">
         <div class="ptext">
-            <span class="border trans">
+            <span class="section-border trans">
                 Sponsors
             </span>
         </div>
@@ -182,7 +190,7 @@
 
     <div class="pimg5" id="contact">
         <div class="ptext">
-            <span class="border trans">
+            <span class="section-border trans">
                 Contact Us
                 <div id="social">
                     <a href="https://www.facebook.com/mcgillultimateteam" target="_blank" class="fa fa-facebook"></a>
@@ -199,6 +207,9 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 
+    <script src="/js/rosters/2016.js"></script>
+    <script src="/js/rosters/2017.js"></script>
+    <script src="/js/rosters/2018.js"></script>
     <script src="/js/main.js"></script>
     
 </body>
