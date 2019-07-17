@@ -155,11 +155,11 @@ nav a.icon {
 }
 
 .row .column table {
-    border-spacing: 30px 5px;
+    border-spacing: 0px 0px;
 }
 
 .row .column th {
-    text-align: center;
+    text-align: left;
     font-style: italic;
 }
 
@@ -182,6 +182,14 @@ nav a.icon {
 
 #roster-table {
     max-width: 300px;
+}
+
+.roster-number {
+    width: 60px;
+}
+
+.roster-name {
+    width: 220px;
 }
 
 #sponsor-list {
